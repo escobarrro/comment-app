@@ -9,14 +9,30 @@ import ParticlesBg from 'particles-bg';
 
 
 const initialState = {
-    route: 'home',
-    isSignedIn: true,
+    route: 'signin',
+    isSignedIn: false,
+    user: {
+        id: '',
+        name: '',
+        email: ''
+    }
 }
+
 
 class App extends React.Component {
     constructor() {
         super();
         this.state = initialState;
+    }
+
+
+    loadUser = (data) => {
+        this.setState({user: {
+                id: data.id,
+                name: data.name,
+                email: data.email,
+                joined: data.joined
+            }})
     }
     
 
