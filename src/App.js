@@ -30,8 +30,7 @@ class App extends React.Component {
         this.setState({user: {
                 id: data.id,
                 name: data.name,
-                email: data.email,
-                joined: data.joined
+                email: data.email
             }})
     }
     
